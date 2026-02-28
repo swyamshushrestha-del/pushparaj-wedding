@@ -1,0 +1,248 @@
+/* ===== CPanel Layout ===== */
+.cpanel-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f0f2f5;
+    font-family: var(--font-body);
+}
+
+/* ===== Sidebar ===== */
+.cpanel-sidebar {
+    width: 260px;
+    background: #1a1a2e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.cpanel-brand {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #c9a87c, #e8d5b7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.cpanel-brand h2 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.brand-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #c9a87c, #b8956a);
+    color: #1a1a2e;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+    padding: 1rem 0 0.5rem;
+}
+
+.sidebar-label {
+    display: block;
+    padding: 0 1.5rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.25);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-body);
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.sidebar-link.active {
+    color: #fff;
+    background: rgba(201, 168, 124, 0.12);
+    border-left-color: #c9a87c;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-link:hover {
+    color: #c9a87c !important;
+}
+
+.logout-link:hover {
+    color: #ef4444 !important;
+}
+
+/* ===== Main Content ===== */
+.cpanel-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.cpanel-header {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.cpanel-header h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-family: var(--font-body);
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #c9a87c, #b8956a);
+    color: #1a1a2e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    line-height: 1.2;
+}
+
+.profile-role {
+    font-size: 0.72rem;
+    color: #9ca3af;
+}
+
+.cpanel-body {
+    padding: 1.5rem 2rem;
+    flex: 1;
+}
+
+/* Welcome Card (fallback) */
+.welcome-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.welcome-card h2 {
+    font-family: var(--font-body);
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card p {
+    color: #6b7280;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .cpanel-sidebar {
+        width: 200px;
+    }
+
+    .cpanel-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cpanel-layout {
+        flex-direction: column;
+    }
+
+    .cpanel-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-footer {
+        flex-direction: row;
+        display: flex;
+    }
+}
