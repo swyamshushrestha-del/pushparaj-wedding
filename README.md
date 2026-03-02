@@ -1,8 +1,15 @@
-# React + Vite
+# Pushparaj Wedding - Bespoke Floral Designs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Luxury wedding and event styling website.
 
-Currently, two official plugins are available:
+## 🌐 Live Website
+Check out the live site here: [https://pushparaj-wedding.netlify.app](https://69a52299e906bc4c1779cbec--keen-bubblegum-cd98af.netlify.app/#)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built With
+- **React + Vite**
+- **Vanilla CSS**
+- **Netlify** (Deployment)
+
+---
+
+Developed for **Pushparaj Wedding** by Swyamshu Shrestha.
