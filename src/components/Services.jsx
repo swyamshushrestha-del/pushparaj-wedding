@@ -1,12 +1,12 @@
 import React from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './Services.css';
 import nepaliBg from '../assets/nepali_wedding_decor_1772272507827.png';
 import receptionBg from '../assets/reception_decor_1772272550435.png';
 import heroBg from '../assets/hero_floral_decor_1772272455981.png';
 
 const Services = () => {
-    const { t } = useData();
+    const { t } = useSiteData();
 
     const servicesData = [
         {

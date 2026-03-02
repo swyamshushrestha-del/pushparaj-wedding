@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import Calendar from '@sbmdkl/nepali-datepicker-reactjs';
 import '@sbmdkl/nepali-datepicker-reactjs/dist/index.css';
 import './Booking.css';
 
 const Booking = () => {
-    const { t, language } = useData();
+    const { t, language } = useSiteData();
     const [formData, setFormData] = useState({
         name: '',
         email: '',

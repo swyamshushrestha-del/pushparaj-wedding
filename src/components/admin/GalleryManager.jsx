@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useData } from '../../context/DataContext';
+import { useSiteData } from '../../context/DataContext';
 import { Trash2, Plus, Image as ImageIcon } from 'lucide-react';
 import './GalleryManager.css';
 
 const GalleryManager = () => {
-    const { galleryImages, addImage, removeImage } = useData();
+    const { galleryImages, addImage, removeImage } = useSiteData();
     const [newImageObj, setNewImageObj] = useState({ title: '', src: '', alt: '' });
     const [isAdding, setIsAdding] = useState(false);
     const [uploadType, setUploadType] = useState('url'); // 'url' or 'local'

@@ -6,7 +6,7 @@ import { translations } from './translations';
 
 const DataContext = createContext();
 
-export const useData = () => useContext(DataContext);
+export const useSiteData = () => useContext(DataContext);
 
 export const DataProvider = ({ children }) => {
     // Gallery Images

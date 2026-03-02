@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useData } from '../../context/DataContext';
+import { useSiteData } from '../../context/DataContext';
 import './ContentManager.css';
 
 const ContentManager = () => {
-    const { siteContent, updateContent } = useData();
+    const { siteContent, updateContent } = useSiteData();
     const [editLang, setEditLang] = useState('en');
     const [activeSection, setActiveSection] = useState('about');
 

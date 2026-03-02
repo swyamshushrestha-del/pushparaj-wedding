@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language, setLanguage, t, siteSettings } = useData();
+  const { language, setLanguage, t, siteSettings } = useSiteData();
 
   useEffect(() => {
     const handleScroll = () => {

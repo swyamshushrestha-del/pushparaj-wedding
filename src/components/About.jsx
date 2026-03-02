@@ -1,9 +1,9 @@
 import React from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './About.css';
 
 const About = () => {
-    const { t, siteImages } = useData();
+    const { t, siteImages } = useSiteData();
 
     return (
         <section className="about section-padding" id="about">

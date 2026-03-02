@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './Gallery.css';
 
 const Gallery = () => {
-    const { galleryImages, t } = useData();
+    const { galleryImages, t } = useSiteData();
     const [modalOpen, setModalOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(false);

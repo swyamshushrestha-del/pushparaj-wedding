@@ -1,9 +1,9 @@
 import React from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './Footer.css';
 
 const Footer = () => {
-    const { t, siteSettings } = useData();
+    const { t, siteSettings } = useSiteData();
 
     const renderFooterLogo = () => {
         if (siteSettings?.logoUrl) {

@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PublicSite from './pages/PublicSite';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
-import { useData } from './context/DataContext';
+import { useSiteData } from './context/DataContext';
 import './App.css';
 
 function App() {
-  const { siteSettings } = useData();
+  const { siteSettings } = useSiteData();
 
   // Sync site identity with browser tab
   React.useEffect(() => {

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useData } from '../../context/DataContext';
+import { useSiteData } from '../../context/DataContext';
 import './SettingsManager.css';
 
 const SettingsManager = () => {
-    const { siteSettings, updateSettings, t } = useData();
+    const { siteSettings, updateSettings, t } = useSiteData();
     const logoInputRef = React.useRef(null);
 
     const handleIdentityChange = (e) => {

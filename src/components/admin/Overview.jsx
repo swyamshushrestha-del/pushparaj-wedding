@@ -1,10 +1,10 @@
 import React from 'react';
-import { useData } from '../../context/DataContext';
+import { useSiteData } from '../../context/DataContext';
 import { Image, FileText, Calendar, Users, TrendingUp, Eye, Clock } from 'lucide-react';
 import './Overview.css';
 
 const Overview = () => {
-    const { galleryImages, siteContent } = useData();
+    const { galleryImages, siteContent } = useSiteData();
 
     // Mock data for the dashboard
     const stats = [

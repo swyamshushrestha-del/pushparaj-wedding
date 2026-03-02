@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { useData } from '../../context/DataContext';
+import { useSiteData } from '../../context/DataContext';
 import './ImageManager.css';
 
 const ImageManager = () => {
-    const { siteImages, updateSiteImage } = useData();
+    const { siteImages, updateSiteImage } = useSiteData();
     const heroRefs = [useRef(null), useRef(null), useRef(null)];
     const aboutRef = useRef(null);
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useData } from '../context/DataContext';
+import { useSiteData } from '../context/DataContext';
 import './Hero.css';
 
 const Hero = () => {
-    const { siteSettings, siteImages, t } = useData();
+    const { siteSettings, siteImages, t } = useSiteData();
     const [currentSlide, setCurrentSlide] = useState(0);
     const prevSlideRef = useRef(0);
 
