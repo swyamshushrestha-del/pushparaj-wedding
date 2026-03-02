@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PublicSite from './pages/PublicSite';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
-import { DataProvider } from './context/DataContext';
+import { useData } from './context/DataContext';
 import './App.css';
 
 function App() {
