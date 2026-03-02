@@ -132,3 +132,8 @@
         /* In a full app, implement a hamburger menu here */
     }
 }
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}

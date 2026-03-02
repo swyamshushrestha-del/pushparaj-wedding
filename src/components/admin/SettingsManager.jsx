@@ -3,7 +3,24 @@ import { useData } from '../../context/DataContext';
 import './SettingsManager.css';
 
 const SettingsManager = () => {
-    const { siteSettings, updateSettings } = useData();
+    const { siteSettings, updateSettings, t } = useData();
+    const logoInputRef = React.useRef(null);
+
+    const handleIdentityChange = (e) => {
+        const { name, value } = e.target;
+        updateSettings({ [name]: value });
+    };
+
+    const handleLogoUpload = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const url = URL.createObjectURL(file);
+        updateSettings({ logoUrl: url });
+    };
+
+    const handleClearLogo = () => {
+        updateSettings({ logoUrl: null });
+    };
 
     const handleEffectChange = (e) => {
         updateSettings({ heroEffect: e.target.value });
@@ -12,7 +29,66 @@ const SettingsManager = () => {
     return (
         <div className="settings-container">
             <div className="manager-header">
-                <h2>Site Settings</h2>
+                <h2>{t('footer.contact')} - {t('nav.services')}</h2>
+            </div>
+
+            {/* Brand Identity Section */}
+            <div className="settings-card">
+                <h3>{t('footer.settings.identityTitle')}</h3>
+                <p className="settings-desc">Manage your business name, slogan, and logo.</p>
+
+                <div className="settings-form">
+                    <div className="form-group">
+                        <label>{t('footer.settings.siteName')}</label>
+                        <input
+                            type="text"
+                            name="siteName"
+                            className="form-control"
+                            value={siteSettings.siteName || ''}
+                            onChange={handleIdentityChange}
+                            placeholder="e.g., Pushparaj Wedding"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label>{t('footer.settings.siteSubtitle')}</label>
+                        <input
+                            type="text"
+                            name="siteSubtitle"
+                            className="form-control"
+                            value={siteSettings.siteSubtitle || ''}
+                            onChange={handleIdentityChange}
+                            placeholder="e.g., Bespoke Floral Designs"
+                        />
+                    </div>
+
+                    <div className="form-group logo-group">
+                        <label>{t('footer.settings.logo')}</label>
+                        <div className="logo-management">
+                            {siteSettings.logoUrl ? (
+                                <div className="logo-preview-card">
+                                    <img src={siteSettings.logoUrl} alt="Site Logo" className="logo-preview-img" />
+                                    <button className="btn-clear" onClick={handleClearLogo}>×</button>
+                                </div>
+                            ) : (
+                                <div className="logo-placeholder">No Logo Uploaded</div>
+                            )}
+                            <div className="logo-actions">
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    ref={logoInputRef}
+                                    style={{ display: 'none' }}
+                                    onChange={handleLogoUpload}
+                                />
+                                <button className="btn btn-outline" onClick={() => logoInputRef.current.click()}>
+                                    {siteSettings.logoUrl ? t('footer.settings.uploadLogo') : 'Upload Logo'}
+                                </button>
+                                <p className="help-text">{t('footer.settings.logoDesc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="settings-card">

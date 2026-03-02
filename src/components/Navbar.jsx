@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language, setLanguage, t } = useData();
+  const { language, setLanguage, t, siteSettings } = useData();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +18,29 @@ const Navbar = () => {
     setLanguage(language === 'en' ? 'ne' : 'en');
   };
 
+  const renderLogo = () => {
+    if (siteSettings?.logoUrl) {
+      return (
+        <a href="#" className="logo">
+          <img src={siteSettings.logoUrl} alt={siteSettings.siteName} className="nav-logo-img" />
+        </a>
+      );
+    }
+
+    const [main, ...sub] = (siteSettings?.siteName || 'Pushparaj Wedding').split(' ');
+
+    return (
+      <a href="#" className="logo">
+        <span className="logo-main">{main}</span>
+        {sub.length > 0 && <span className="logo-sub">{sub.join(' ')}</span>}
+      </a>
+    );
+  };
+
   return (
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#" className="logo">
-          <span className="logo-main">Pushparaj</span>
-          <span className="logo-sub">Wedding</span>
-        </a>
+        {renderLogo()}
 
         <nav className="nav-links">
           <a href="#services">{t('nav.services')}</a>

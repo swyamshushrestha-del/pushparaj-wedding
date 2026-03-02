@@ -67,3 +67,9 @@
         gap: 2rem;
     }
 }
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}

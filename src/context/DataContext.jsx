@@ -35,7 +35,12 @@ export const DataProvider = ({ children }) => {
     // Site Settings
     const [siteSettings, setSiteSettings] = useState(() => {
         const savedSettings = localStorage.getItem('pushparaj_settings');
-        return savedSettings ? JSON.parse(savedSettings) : { heroEffect: 'fade' };
+        return savedSettings ? JSON.parse(savedSettings) : {
+            heroEffect: 'fade',
+            siteName: 'Pushparaj Wedding',
+            siteSubtitle: 'Bespoke Floral Designs',
+            logoUrl: null
+        };
     });
 
     // Language

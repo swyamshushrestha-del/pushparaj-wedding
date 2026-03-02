@@ -130,7 +130,16 @@ export const translations = {
             address1: '📍 Nayabazar, Pokhara',
             address2: '📍 New Road, Pokhara',
             phone: '📞 +977 123 456 7890',
-            email: '✉️ hello@pushparajwedding.com'
+            email: '✉️ hello@pushparajwedding.com',
+            settings: {
+                identityTitle: 'Brand Identity',
+                siteName: 'Business Name',
+                siteSubtitle: 'Slogan / Subtitle',
+                logo: 'Business Logo',
+                logoDesc: 'Upload a logo to appear in the header and footer.',
+                uploadLogo: 'Upload Logo',
+                clearLogo: 'Clear Logo'
+            }
         }
     },
     ne: {
@@ -264,7 +273,16 @@ export const translations = {
             address1: '📍 नयाँबजार, पोखरा',
             address2: '📍 न्युरोड, पोखरा',
             phone: '📞 +९७७ १२३ ४५६ ७८९०',
-            email: '✉️ hello@pushparajwedding.com'
+            email: '✉️ hello@pushparajwedding.com',
+            settings: {
+                identityTitle: 'ब्रान्ड पहिचान',
+                siteName: 'व्यवसायको नाम',
+                siteSubtitle: 'स्लोगन / उपशीर्षक',
+                logo: 'व्यवसायको लोगो',
+                logoDesc: 'हेडर र फुटरमा देखाउनको लागि लोगो अपलोड गर्नुहोस्।',
+                uploadLogo: 'लोगो अपलोड गर्नुहोस्',
+                clearLogo: 'लोगो हटाउनुहोस्'
+            }
         }
     }
 };

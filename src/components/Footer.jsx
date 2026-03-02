@@ -3,16 +3,32 @@ import { useData } from '../context/DataContext';
 import './Footer.css';
 
 const Footer = () => {
-    const { t } = useData();
+    const { t, siteSettings } = useData();
+
+    const renderFooterLogo = () => {
+        if (siteSettings?.logoUrl) {
+            return (
+                <div className="footer-logo">
+                    <img src={siteSettings.logoUrl} alt={siteSettings.siteName} className="footer-logo-img" />
+                </div>
+            );
+        }
+
+        const [main, ...sub] = (siteSettings?.siteName || 'Pushparaj Wedding').split(' ');
+
+        return (
+            <h2 className="footer-logo">
+                <span className="logo-main">{main}</span>
+                {sub.length > 0 && <span className="logo-sub">{sub.join(' ')}</span>}
+            </h2>
+        );
+    };
 
     return (
         <footer className="footer" id="contact">
             <div className="container footer-content">
                 <div className="footer-brand">
-                    <h2 className="footer-logo">
-                        <span className="logo-main">Pushparaj</span>
-                        <span className="logo-sub">Wedding</span>
-                    </h2>
+                    {renderFooterLogo()}
                     <p className="footer-desc">
                         {t('footer.brandDesc')}
                     </p>
