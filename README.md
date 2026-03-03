@@ -3,7 +3,7 @@
 Luxury wedding and event styling website.
 
 ## 🌐 Live Website
-Check out the live site here: [https://pushparaj-wedding.netlify.app](https://69a52299e906bc4c1779cbec--keen-bubblegum-cd98af.netlify.app/#)
+Check out the live site here: https://www.pushparajwedding.com
 
 ## 🛠️ Built With
 - **React + Vite**
